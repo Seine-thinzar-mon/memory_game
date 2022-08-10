@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+</head>
+<script type="module">
+    // import css file
+    import styles from './index.css' assert { type: "css" };
+    document.adoptedStyleSheets = [styles];
+</script>
+
+<body class="body_class">
+    <script>
+        function handleStartGame() {
+            const all_icons = ['🍍', '🥝', '🥑', '🍓', '🍋', '🍑', '🍇', '🍉', '🍌', '🍅', '🌽', '🍆', '🥥', '🍒'];
+            const choices = all_icons.sort(() => Math.random() - 0.5).slice(0, 8);
+            const doubled_choices = [...choices,...choices].sort(()=> Math.random() -0.5)
+            console.log('choices ', doubled_choices)
+        }
+    </script>
+
+    <div class="header">
+        <h2>🧠 Memory Game</h2>
+    </div>
+    <div class="game_container">
+        <div class="control">
+            <button class="start_button" onclick="handleStartGame()">Start</button>
+            <div>Time : 00:00</div>
+        </div>
+        <div class="game_board">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
