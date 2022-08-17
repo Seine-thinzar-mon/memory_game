@@ -54,4 +54,20 @@
     text-align: center;
     height: 65px;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .front {
+    display: none;
+    position: absolute;
+  }
+
+  .back {
+    display: block;
+    background-color: rgba(213, 213, 213, 0.8);
+    position: absolute;
   }
